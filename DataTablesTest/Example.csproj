@@ -253,9 +253,9 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataTablesServerSideBindings\DataTablesNetSS.csproj">
+    <ProjectReference Include="..\DataTablesServerSideBindings\DataTables-NetSS.csproj">
       <Project>{A8846B4A-480E-477E-B04D-B37729BF71F2}</Project>
-      <Name>DataTablesNetSS</Name>
+      <Name>DataTables-NetSS</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -3,13 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTablesTest", "DataTablesTest\DataTablesTest.csproj", "{90D3D261-CB2B-4085-888E-AE5D5A38BD6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "DataTablesTest\Example.csproj", "{90D3D261-CB2B-4085-888E-AE5D5A38BD6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTablesNetSS", "DataTablesServerSideBindings\DataTablesNetSS.csproj", "{A8846B4A-480E-477E-B04D-B37729BF71F2}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{C25BFC38-BF71-412E-9AE6-CA3C4DD120FF}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{B1813E22-E65E-460C-8B0E-5D69E44856B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTables-NetSS", "DataTablesServerSideBindings\DataTables-NetSS.csproj", "{A8846B4A-480E-477E-B04D-B37729BF71F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,9 +24,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{90D3D261-CB2B-4085-888E-AE5D5A38BD6D} = {B1813E22-E65E-460C-8B0E-5D69E44856B1}
-		{A8846B4A-480E-477E-B04D-B37729BF71F2} = {C25BFC38-BF71-412E-9AE6-CA3C4DD120FF}
 	EndGlobalSection
 EndGlobal
