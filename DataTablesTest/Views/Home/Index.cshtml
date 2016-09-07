@@ -1,0 +1,82 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>Asp.NET MVC DataTables Demo</h1>
+<div class="row">
+    <table id="example" class="table table-bordered table-condensed table-striped" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Company</th>
+                <th>Office</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+@section scripts
+{
+    <!--initialized with bootstrap styling...make sure you use this if running bootstrap!!-->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/t/bs/dt-1.10.11/datatables.min.css" />
+
+<script type="text/javascript" src="https://cdn.datatables.net/t/bs/dt-1.10.11/datatables.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            // Setup - add a text input to each footer cell(multi-column search)
+            //https://datatables.net/examples/api/multi_filter.html
+            $('#example tfoot th').each(function () {
+                var title = $(this).text();
+                $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+            });
+
+
+
+
+            var table=$('#example').DataTable({
+                "processing": true,
+                "serverSide": true,
+                "search" : true,//set searchable to true by default
+                //https://datatables.net/examples/basic_init/dom.html 
+                "dom":"lipt",//hide global search...we are doing per-col
+                "lengthMenu": [[10,25,-1],[10,25,'All']],
+                "ajax": {
+                    "url": "@Url.Action("DataTable")",
+                    "data": function(d)
+                    {
+                        //need to pass as JSON string for MVC model binding to work properly
+                        return { myDataTableParameter: JSON.stringify(d) };
+                    }
+                }
+            });
+
+            // Apply the search
+            //https://datatables.net/examples/api/multi_filter.html
+            table.columns().every(function () {
+                var that = this;
+
+                $('input', this.footer()).on('keyup change', function () {
+                    if (that.search() !== this.value) {
+                        that
+                            .search(this.value)
+                            .draw();
+                    }
+                });
+            });
+
+        });
+    </script>
+}
