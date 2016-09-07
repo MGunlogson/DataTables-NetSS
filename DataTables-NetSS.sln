@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "DataTablesTest\Example.csproj", "{90D3D261-CB2B-4085-888E-AE5D5A38BD6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{90D3D261-CB2B-4085-888E-AE5D5A38BD6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTables-NetSS", "DataTablesServerSideBindings\DataTables-NetSS.csproj", "{A8846B4A-480E-477E-B04D-B37729BF71F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTables-NetSS", "DataTables-NetSS\DataTables-NetSS.csproj", "{A8846B4A-480E-477E-B04D-B37729BF71F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
