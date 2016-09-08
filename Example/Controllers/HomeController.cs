@@ -26,6 +26,7 @@ namespace DataTablesTest.Controllers
         /// </summary>
         /// <param name="table"></param>
         /// <returns></returns>
+        [HttpPost]//always use post, see client side call in index view
         public ActionResult DataTable(string myDataTableParameter)
         {
             //we pass in table as a JSON string because the MVC model binder is utterly incapable of parsing datatables output.
@@ -124,6 +125,7 @@ namespace DataTablesTest.Controllers
             var QryResult = DataQry.ToList();
             return new DataTablesResult
             {
+                //DONT MESS WITH THE DRAW PARAMETER
                 draw = TableIn.draw,
                 recordsTotal = Data.Count(),//dataset size before any searching/filtering
                 recordsFiltered = recordsFiltered, //after filtering, before paging
@@ -133,6 +135,9 @@ namespace DataTablesTest.Controllers
         }
 
     }
+    /// <summary>
+    /// this just loads a dataset from JSON so I don't need a database backing the example.
+    /// </summary>
     public class DataTableTestData
     {
         public string FirstName { get; set; }
