@@ -10,6 +10,12 @@ Usage
 -------------------
 It's easiest to start with the provided example code, but we use some options like per-column search and the code is pretty verbose. Below is the minimum DataTables initialization to forward the correct data to the server, which only supports paging.
 
+Demo and Example Code
+------------------
+* Example code is included within the solution in this repo.
+* For production use you'll probably want to install the [nuget package.](https://www.nuget.org/packages/DataTablesNetSS/)
+* Example code demo is running [here.](http://netss.gunlogson.com/)
+
 View (client side)
 -------------------
 ```javascript
