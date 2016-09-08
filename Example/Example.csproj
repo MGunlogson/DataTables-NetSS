@@ -215,6 +215,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="data.json" />
+    <None Include="Properties\PublishProfiles\Datatables-NetSS - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\Datatables-NetSS - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
