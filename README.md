@@ -44,6 +44,10 @@ public ActionResult AjaxDtAction(string myDataTableParameter)
     var TableIn = DataTablesIn.ParseJSONString(myDataTableParameter);
     //load from database or wherever
     IQueryable<DataItem> DataQry= GetData();
+	
+	//recordsFiltered should be set to # of records from query before paging is applied
+    var recordsFiltered = DataQry.Count();
+	
     //paging support
     DataQry = DataQry.Skip(TableIn.start);
     //need to handle "return all records" (-1)
@@ -57,7 +61,7 @@ public ActionResult AjaxDtAction(string myDataTableParameter)
         //DONT MESS WITH THE DRAW PARAMETER
         draw = TableIn.draw,
         recordsTotal = DataQry.Count(),//dataset size before any searching/filtering
-        recordsFiltered = DataQry.Count(), //size after filtering, before paging.
+        recordsFiltered = recordsFiltered, //size after filtering, before paging.
         //pay close attention to the data structure. Json parser need an array without property names for each object. Make sure everything is ToStringed()
         data = QryResult.Select(x => new[] {x.field1 ,x.field2 }).ToList()
     };
