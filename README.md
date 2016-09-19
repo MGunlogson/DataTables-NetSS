@@ -4,7 +4,7 @@ THE DOCUMENTATION
 Intro
 -----------------
 
-This is a set of simple helpers for communicating with Query Datatables. They can be used to access native DataTables server-side Ajax objects, which are normally difficult to use with ASP.NET MVC. This library doesn't have any "magic" inside like other DataTables binders, allowing you to use provided library examples and your own HTML formatting.
+This is a set of helpers for communicating with JQuery Datatables. They can be used to access native DataTables server-side Ajax objects, which are normally difficult to use with ASP.NET MVC. This library doesn't have any "magic" inside like other DataTables binders, it's simple by design.
 
 Usage
 -------------------
